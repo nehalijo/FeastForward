@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #a097d6, #4d4376);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .dcontainer {
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .dnavbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 10px;
+  }
+  
+  .dnavbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .dtitle {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .donor-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .donor-form label {
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .donor-form input,
+  .donor-form select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .donor-form input:focus,
+  .donor-form select:focus {
+    outline: none;
+    border: 2px solid #ffffff;
+  }
+  
+  .dbutton {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .dbutton:hover {
+    background-color: #e0e0e0;
+  }
+  
