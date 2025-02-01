@@ -9,12 +9,11 @@ router.post('/register',async(req,res) => {
 
     try {
         const hashedPassword = await bcrypt.hash(password, 10);
-        const query = 'INSERT INTO users (name, email, password) VALUES (?,?,?)';
+        const query = 'INSERT INTO users (uname, email, password) VALUES (?,?,?)';
 
-        db.query(query,[name, email, hashedPassword], (err, result) => {
-            if (err) throw err;
-            res.status(201).send('User registered successfully');
-        });
+        const [result] = await db.promise().query(query, [name, email, hashedPassword]);
+        res.status(201).send('User registered successfully');
+
     } catch(error) {
         res.status(500).send('Error registering user');
     }
