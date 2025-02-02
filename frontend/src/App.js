@@ -1,6 +1,8 @@
 /*//simport logo from './logo.svg';
 import LoginSignup from './components/loginsignup/login'
 import Home from './components/home/home'
+import DonorForm from './components/donorpage/donorform'
+
 import './App.css';
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
     <div>
       <LoginSignup> </LoginSignup>
       <Home />
+      <DonorForm/>
     </div>
   );
 }

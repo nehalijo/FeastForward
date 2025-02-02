@@ -74,7 +74,7 @@
     cursor: pointer;
   }
   
-  .submit-container {
+  .submit-container{
     display: flex;
     justify-content: space-between;
     width: 300px;
