@@ -7,21 +7,26 @@ const FoodListings = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/")
-      .then((response) => {
+    const fetchFoodItems = async () => {
+      try {
+        const response = await fetch("http://localhost:3002/recipient");
+
         if (!response.ok) {
-          throw new Error("Failed to fetch data");
+          console.log(await response.text());  
+          throw new Error('Failed to fetch data');
         }
-        return response.json();
-      })
-      .then((data) => {
+
+        const data = await response.json();
+        console.log(data, "data");
         setFoodItems(data);
         setLoading(false);
-      })
-      .catch((error) => {
+      } catch (error) {
         setError(error.message);
         setLoading(false);
-      });
+      }
+    };
+
+    fetchFoodItems();
   }, []);
 
   return (
